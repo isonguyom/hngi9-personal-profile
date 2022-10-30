@@ -3,12 +3,16 @@ import './App.css';
 
 
 
-
+function Profile() {
+    return (
+        <h1>Hello, Profile</h1>
+    );
+};
 
 
 function App() {
     return (
-        <h1>Hello, App component</h1>
+        <Profile/>
     );
 };
 
