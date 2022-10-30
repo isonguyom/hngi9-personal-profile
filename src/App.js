@@ -5,7 +5,11 @@ import './App.css';
 
 function Profile() {
     return (
-        <h1>Hello, Profile</h1>
+        <div className='Profile-section'>
+            <img src='' id='profile_img' alt='profile picture'/>
+            <p id='twitter'>@IsonguyoM</p>
+            <p id='slack'>Isonguyom</p>
+        </div>
     );
 };
 
