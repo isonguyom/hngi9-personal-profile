@@ -1,9 +1,11 @@
 import React from 'react';
 import image from './me.jpg'
+import zuriLogo from './zuri_logo.svg'
+import i4g from './i4g_logo.png'
 import './App.css';
 
 function Button(props) {
-    return <a href={ props.link }>{ props.text }</a>
+    return <a href={ props.link } id={ props.id }>{ props.text }</a>
 }
 
 function Profile() {
@@ -19,9 +21,9 @@ function Profile() {
 function Footer() {
     return (
         <div className='Footer'>
-            <Button link='Zuri.com' text='Zuri'/>
+            <a href='https://internship.zuri.team/'><img src={ zuriLogo } alt='Zuri Internship'/></a>
             <p>HNG Internship 9 Front-end Task</p>
-            <Button link='Zuri.com' text='I4G'/>
+            <a href='https://internship.zuri.team/'><img src={ i4g } alt='I4G'/></a>
         </div>
     )
 }
@@ -29,10 +31,11 @@ function Footer() {
 function Links() {
     return (
         <div className='Links'>
-        <Button link='react.org' text='React' />
-        <Button link='react.org' text='React' />
-        <Button link='react.org' text='React' />
-        <Footer />
+        <Button link='https://training.zuri.team/' id='btn__zuri' text='Zuri Training' />
+        <Button link='http://books.zuri.team' id='books' text='Zuri Books' />
+        <Button link='https://books.zuri.team/python-for-beginners' id='book__python' text='Python Books' />
+        <Button link='https://background.zuri.team' id='pitch' text='Background checks on coders' />
+        <Button link='https://books.zuri.team/design-rules' id='book__design' text='Design Books' />
         </div>
     );
 };
@@ -43,6 +46,7 @@ function App() {
         <div>
         <Profile/>
         <Links/>
+        <Footer />
         </div>
     );
 };
