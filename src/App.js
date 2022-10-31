@@ -1,4 +1,5 @@
 import React from 'react';
+import image from './me.jpg'
 import './App.css';
 
 function Button(props) {
@@ -8,7 +9,7 @@ function Button(props) {
 function Profile() {
     return (
         <div className='Profile-section'>
-            <img src='' id='profile_img' alt='profile'/>
+            <img src={ image } id='profile_img' alt='Martin'/>
             <p id='twitter'>@IsonguyoM</p>
             <p id='slack'>Isonguyom</p>
         </div>
