@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 
-
+function Button(props) {
+    return <a href={ props.link }>{ props.text }</a>
+}
 
 function Profile() {
     return (
@@ -16,7 +18,7 @@ function Profile() {
 function Links() {
     return (
         <div className='Links'>
-        <h1>Hello, Links</h1>
+        <Button link='react.org' text='React' />
         </div>
     );
 };
