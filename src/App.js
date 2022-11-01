@@ -7,7 +7,7 @@ import github from './github.svg'
 import './App.css';
 
 function Button(props) {
-    return <a className='btn' href={ props.link } id={ props.id } type='button'>{ props.text }</a>
+    return <a className='btn' href={ props.link } id={ props.id } title={ props.title} type='button'>{ props.text }</a>
 }
 
 function Profile(props) {
@@ -18,7 +18,7 @@ function Profile(props) {
             <h2 id='name'>Martin Isonguyo</h2>
             <div className='usernames'>
             <span id='twitter'><b>Twitter: </b>IsonguyoM</span>
-            {displaySlack == true &&
+            {displaySlack === true &&
       <span id='slack'><b>Slack: </b>Isonguyom</span>
       }
             </div>
@@ -31,14 +31,15 @@ function Profile(props) {
 function Links() {
     return (
         <div className='Links'>
-        <Button link='https://training.zuri.team/' id='btn__zuri' text='Zuri Training' />
-        <Button link='http://books.zuri.team' id='books' text='Zuri Books' />
-        <Button link='https://books.zuri.team/python-for-beginners' id='book__python' text='Python Books' />
-        <Button link='https://background.zuri.team' id='pitch' text='Background checks on coders' />
-        <Button link='https://books.zuri.team/design-rules' id='book__design' text='Design Books' />
+        <Button link='https://training.zuri.team/' id='btn__zuri' text='Zuri team' />
+        <Button link='http://books.zuri.team' id='books' title='
+We have amazing books on design and coding that will enhance your learning.' text='Zuri Books' />
+        <Button link='https://books.zuri.team/python-for-beginners' id='book__python' text='Order our top-selling Python books' />
+        <Button link='https://background.zuri.team' id='pitch' text='Do you want a coder background check? We are all you need.' />
+        <Button link='https://books.zuri.team/design-rules' id='book__design' text='Get our free design books' />
         <div className='links_footer'>
-            <a className='social_link' href='https://ingressive.org/'><img src={ slack } alt='slack'/></a>
-            <a className='social_link' href='https://ingressive.org/'><img src={ github } alt='github' /></a>
+            <a className='social_link' href='https://app.slack.com/client/T042F7V19Q8/C041JU70S5U/rimeto_profile/U049CQ9T03A'><img src={ slack } alt='slack'/></a>
+            <a className='social_link' href='https://github.com/isonguyom'><img src={ github } alt='github' /></a>
         </div>
         </div>
     );
