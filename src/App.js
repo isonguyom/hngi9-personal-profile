@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useRef } from 'react';
 import image from './me.jpg'
 import zuriLogo from './zuri_logo.svg'
 import i4g from './i4g_logo.svg'
@@ -7,7 +7,7 @@ import github from './github.svg'
 import './App.css';
 
 function Button(props) {
-    return <a className='btn' href={ props.link } id={ props.id } title={ props.title} type='button'>{ props.text }</a>
+    return <a className='btn' href={ props.link } id={ props.id } title={ props.title} ref={ props.ref_id } type='button'>{ props.text }</a>
 }
 
 function Profile(props) {
@@ -29,12 +29,13 @@ function Profile(props) {
 
 
 function Links() {
+    const refValue = useRef("Martin Isonguyo")
     return (
         <div className='Links'>
         <Button link='https://training.zuri.team/' id='btn__zuri' text='Zuri team' />
         <Button link='http://books.zuri.team' id='books' title='
 We have amazing books on design and coding that will enhance your learning.' text='Zuri design and coding books' />
-        <Button link='https://books.zuri.team/python-for-beginners' id='book__python' text='Purchase the best-selling Python books' />
+        <Button link='https://books.zuri.team/python-for-beginners' id='book__python' ref_id={ refValue } text='Purchase the best-selling Python books' />
         <Button link='https://background.zuri.team' id='pitch' text='Do you want a coder background check? Zuri is all you need.' />
         <Button link='https://books.zuri.team/design-rules' id='book__design' text='Get free design books' />
         <div className='links_footer'>

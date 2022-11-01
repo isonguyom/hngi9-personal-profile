@@ -41,6 +41,10 @@
     border-radius: 5px;
 }
 
+.btn:hover {
+    background-color: #d0d1d4;
+}
+
 .links_footer {
     margin-top: 30px;
 }
