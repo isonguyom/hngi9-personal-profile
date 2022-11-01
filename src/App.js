@@ -10,14 +10,17 @@ function Button(props) {
     return <a className='btn' href={ props.link } id={ props.id } type='button'>{ props.text }</a>
 }
 
-function Profile() {
+function Profile(props) {
+    const displaySlack = props.displaySlack
     return (
         <div className='Profile'>
             <img src={ image } id='profile_img' alt='Martin'/>
             <h2 id='name'>Martin Isonguyo</h2>
             <div className='usernames'>
             <span id='twitter'><b>Twitter: </b>IsonguyoM</span>
-            <span id='slack'><b>Slack: </b>Isonguyom</span>
+            {displaySlack == true &&
+      <span id='slack'><b>Slack: </b>Isonguyom</span>
+      }
             </div>
         </div>
     );

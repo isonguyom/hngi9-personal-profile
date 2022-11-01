@@ -18,6 +18,10 @@
     padding: 10px;
 }
 
+/* #slack {
+    visibility: hidden;
+} */
+
 .Links {
     text-align: center;
 }
