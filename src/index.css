@@ -6,7 +6,9 @@
   margin: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
+    font: 15px 'Inter', sans-serif;;
     margin: 20px;
 }

@@ -4,8 +4,8 @@
 }
 
 #profile_img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     /* display: block; */
     border-radius: 50%;
 }
@@ -16,6 +16,7 @@
 
 .usernames span {
     padding: 10px;
+    font-style: italic;
 }
 
 /* #slack {
