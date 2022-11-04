@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 function Contact() {
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -5,7 +7,8 @@ function Contact() {
       };
 
 return (
-    <form className='Contact' onSubmit={handleSubmit}>
+    <div className="Contact">
+    <form className='contact-form' onSubmit={handleSubmit}>
         <h2 id='contact_form_title'>Contact Me</h2>
         <p>Hi there, contact me to ask me about anything you have in mind.</p>
         <div className='names-wrapper'>
@@ -33,6 +36,8 @@ return (
     </div>
     <button type='submit' id='btn__submit'>Send message</button>
 </form>
+<Footer />
+</div>
 );
 };
 

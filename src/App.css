@@ -61,7 +61,7 @@
 }
 
 .Footer {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .Footer p {
@@ -71,6 +71,14 @@ margin: 10px 0;
 /* Contact Page */
 .Contact {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.Contact .contact-form {
+    margin-bottom: 60px;
 }
 
 .Contact #contact_form_title {

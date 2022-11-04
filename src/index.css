@@ -11,4 +11,5 @@
 body {
     font: 15px 'Inter', sans-serif;;
     margin: 20px;
+    min-height: 100vh;
 }
