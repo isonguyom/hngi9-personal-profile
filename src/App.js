@@ -1,9 +1,11 @@
 import { React, useRef } from 'react';
-import image from './me.jpg'
-import zuriLogo from './zuri_logo.svg'
-import i4g from './i4g_logo.svg'
-import slack from './slack.svg'
-import github from './github.svg'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Contact from "./pages/Contact";
+import image from './assets/me.jpg'
+import zuriLogo from './assets/zuri_logo.svg'
+import i4g from './assets/i4g_logo.svg'
+import slack from './assets/slack.svg'
+import github from './assets/github.svg'
 import './App.css';
 
 function Button(props) {
@@ -38,6 +40,7 @@ We have amazing books on design and coding that will enhance your learning.' tex
         <Button link='https://books.zuri.team/python-for-beginners' id='book__python' ref_id={ refValue } text='Purchase the best-selling Python books' />
         <Button link='https://background.zuri.team' id='pitch' text='Do you want a coder background check? Zuri is all you need.' />
         <Button link='https://books.zuri.team/design-rules' id='book__design' text='Get free design books' />
+        <Button link='contact' id='contact' text='contact' />
         <div className='links_footer'>
             <a className='social_link' href='https://app.slack.com/client/T042F7V19Q8/C041JU70S5U/rimeto_profile/U049CQ9T03A'><img src={ slack } alt='slack'/></a>
             <a className='social_link' href='https://github.com/isonguyom'><img src={ github } alt='github' /></a>
@@ -57,8 +60,7 @@ function Footer() {
     );
 };
 
-
-function App() {
+function Home() {
     return (
         <div>
         <Profile/>
@@ -66,6 +68,17 @@ function App() {
         <Footer />
         </div>
     );
+}
+
+function App() {
+    return (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+      );
 };
 
 
